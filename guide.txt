@@ -1,0 +1,9 @@
+::: Notas para construção de Wavegan :::
+
+- todos os parâmetros deverão ser controlados por um ficheiro yaml, e não por variaveis fixas no código
+- Existem um conjunto de parâmetros na implementação original, inicialmente iremos só trabalhar com os mais simples, e acrescentando complexidade à medida que o tempo passa.
+- Primeiro módulo é um infer(), permite construi um metagráfo. Nesta fase iremos implementar um metagraph igual à ideia original.
+- Primeiro módulo é um "loader". Basicamente carrega o audio para a arquitetura.
+- Depois do return do loader, é necessário criar o vetor Z. O vetor "cheio de nada" que dará origem aos novos audios
+- É necessário criar o módulo da wavegan, onde poderemos configurar vários parâmetros e fazer dois "callable" objetos... o WaveGANGenerator e o WaveGANDiscriminator
+- Computar a loss "wasserstein distance" == wgan 
